@@ -32,7 +32,7 @@ public class PhoneBook {
 	
 	
 	private ArrayList<String> ThereIsNoSuchMan(){
-		ArrayList<String> warning = new ArrayList<String>(1);
+		ArrayList<String> warning = new ArrayList<String>(0);
 		warning.add("Нет такого ФИО в базе данных");
 		return warning;
 	}
