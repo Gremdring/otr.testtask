@@ -1,13 +1,18 @@
 package otr.testtask.IPsprectrum;
 
-/**
- * Hello world!
- *
- */
+import java.util.Scanner;
+
 public class App 
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+    	IPspectrum IPspec = new IPspectrum();
+    	Scanner scan = new Scanner(System.in);
+    	String ip1 = scan.nextLine();
+    	String ip2 = scan.nextLine();
+    	scan.close();
+    	
+    	IPspec.PrintTheSpectrum(ip1, ip2);
+
     }
 }

@@ -22,7 +22,11 @@ public class IPspectrum {
 		
 		ArrayList<String> res = DoTheSpectrum(ip1,ip2);
 		
-		//TODO: вывод на экран результата
+		Iterator<String> it = res.iterator();
+		
+		while(it.hasNext()) {
+			System.out.println(it.next());
+		}
 		
 	}
 
