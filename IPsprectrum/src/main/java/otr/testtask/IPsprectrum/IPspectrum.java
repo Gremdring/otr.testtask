@@ -42,11 +42,11 @@ public class IPspectrum {
 			IPSumm0 = dig0[0]*(int)Math.pow(256,3)
 						+dig0[1]*(int)Math.pow(256,2)+
 						 +dig0[2]*(int)Math.pow(256,1)
-						  +dig0[3]*(int)Math.pow(256,3);
+						  +dig0[3];
 			IPSumm1 = dig1[0]*(int)Math.pow(256,3)
 						+dig1[1]*(int)Math.pow(256,2)+
 						 +dig1[2]*(int)Math.pow(256,1)
-						  +dig1[3]*(int)Math.pow(256,3);
+						  +dig1[3];
 			
 			if(IPSumm0 == IPSumm1)
 				return res;
