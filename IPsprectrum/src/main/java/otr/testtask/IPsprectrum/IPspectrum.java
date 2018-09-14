@@ -1,5 +1,6 @@
 package otr.testtask.IPsprectrum;
 
+import java.math.BigInteger;
 import java.util.*;
 import java.util.regex.*;
 
@@ -30,32 +31,25 @@ public class IPspectrum {
 		ArrayList<String> res = new ArrayList<String>(0);
 		int[] dig0 = new int[4];
 		int[] dig1 = new int[4];
-		long IPSumm0,IPSumm1;
+		BigInteger IPSumm0 = new BigInteger("0");
+		BigInteger IPSumm1 = new BigInteger("0");
 		
 		
 		if (ValidCheck(ip0) && ValidCheck(ip1)) {
 			//Изъяли цифры
 			dig0 = DigTheDigits(ip0);
-			dig1 = DigTheDigits(ip1);
+			dig1 = DigTheDigits(ip1);			
 			
-			//выбрали большее меньшее
-			IPSumm0 = dig0[0]*(int)Math.pow(256,3)
-						+dig0[1]*(int)Math.pow(256,2)+
-						 +dig0[2]*(int)Math.pow(256,1)
-						  +dig0[3];
-			IPSumm1 = dig1[0]*(int)Math.pow(256,3)
-						+dig1[1]*(int)Math.pow(256,2)+
-						 +dig1[2]*(int)Math.pow(256,1)
-						  +dig1[3];
-			
-			if(IPSumm0 == IPSumm1)
-				return res;
-			
-			int[] big  = IPSumm1 > IPSumm0 ? dig1 : dig0;
-			int[] small = IPSumm1 > IPSumm0 ? dig0 : dig1;
-
-			res = SpectrumCycle(small,big);				
+			for(int i = 0; i <= 3; i++)	{
+				if(dig0[i] != dig1[i]) {
+					int[] big   = (dig1[i] > dig0[i]) ? dig1 : dig0;
+					int[] small = (dig1[i] > dig0[i]) ? dig0 : dig1;
+					res = SpectrumCycle(small,big);		
+					break;
+				}
+			}
 			return res;
+			
 			
 					
 		} else {
