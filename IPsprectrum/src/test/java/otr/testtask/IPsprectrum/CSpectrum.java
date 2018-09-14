@@ -14,9 +14,9 @@ public class CSpectrum {
 		
 		ArrayList<String> expectation = new ArrayList<String>(0);
 		expectation.add("192.168.255.255");
-		expectation.add("192.169.0.0");
-		expectation.add("192.169.0.1");
-		expectation.add("192.169.0.2");
+		expectation.add("192.168.0.0");
+		expectation.add("192.168.0.1");
+		expectation.add("192.168.0.2");
 		
 		ArrayList<String> output = spec.DoTheSpectrum("192.168.255.254", "192.169.0.3");
 		
