@@ -17,7 +17,7 @@ public class Sidorov {
 		expectation.add("1. +8 800 2000 800");
 		expectation.add("2. +8 800 2000 900");
 		expectation.add("3. +8 800 2000 000");
-		assertEquals(output,expectation);
+		assertEquals(expectation, output);
 		
 		
 	}

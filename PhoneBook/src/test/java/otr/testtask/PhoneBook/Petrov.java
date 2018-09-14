@@ -16,7 +16,7 @@ public class Petrov {
 		ArrayList<String> expectation = new ArrayList<String>(0);
 		expectation.add("1. +8 800 2000 700");
 		
-		assertEquals(output,expectation);
+		assertEquals(expectation, output);
 		
 		
 	}

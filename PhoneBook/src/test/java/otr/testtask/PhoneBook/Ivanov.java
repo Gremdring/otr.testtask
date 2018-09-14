@@ -17,7 +17,7 @@ public class Ivanov {
 		expectation.add("1. +8 800 2000 500");
 		expectation.add("2. +8 800 200 600");
 		
-		assertEquals(output,expectation);
+		assertEquals(expectation, output);
 		
 		
 	}
