@@ -9,7 +9,8 @@ public class App
     {
     	 Scanner scan = new Scanner(System.in);
     	 String s = scan.nextLine();
-    	 
+    	 scan.close();
+
     	 PhoneBook p = new PhoneBook();
     	 p.PrintThePhoneList(s);
     	 
